@@ -1,46 +1,225 @@
-<style>
-body { margin:0; font-family:Arial, sans-serif; background:#f8f8f8; color:#222; }
-header { position:fixed; top:0; width:100%; background:white; box-shadow:0 2px 5px rgba(0,0,0,0.1); padding:15px 40px; display:flex; justify-content:space-between; align-items:center; z-index:1000; }
-header nav a { margin-left:20px; text-decoration:none; font-weight:bold; color:#333; }
-header nav a:hover { color:#007bff; }
+/* Portfolio CSS — Edited for Professional Look  
+   Author: Anthon Miguel Ponce, BSIS Student 
+*/
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    scroll-behavior: smooth;
+}
 
-.hero { padding:140px 40px 80px; background:white; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-.hero h1 { font-size:40px; margin-bottom:15px; }
-.hero p { color:#555; margin-bottom:25px; }
-.highlight { color:#007bff; font-weight:bold; }
+/* ------------------ HEADER ------------------ */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
 
+header nav a {
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s;
+}
 
-.btn { padding:12px 25px; border-radius:10px; font-weight:bold; text-decoration:none; }
-.primary { background:#007bff; color:white; }
-.primary:hover { background:#0067d6; }
-.outline { border:2px solid #007bff; color:#007bff; }
-.outline:hover { background:#e8f1ff; }
+header nav a:hover {
+    color: #007bff;
+}
 
+/* ------------------ HERO ------------------ */
+.hero {
+    padding: 140px 40px 80px;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
 
-.hero-img { width:100%; height:250px; background:#ddd; border-radius:20px; }
+.hero h1 {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
+.hero p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
 
-section { padding:80px 40px; text-align:center; }
-h2 { font-size:32px; margin-bottom:20px; }
-p { max-width:700px; margin:auto; color:#444; }
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
 
+.hero-img {
+    width: 100%;
+    height: 260px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:20px; margin-top:40px; }
-.skill { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.06); font-weight:bold; }
+/* ------------------ BUTTONS ------------------ */
+.btn {
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
+.primary {
+    background: #007bff;
+    color: white;
+}
 
-.gray-section { background:#f3f3f3; }
-.projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; margin-top:40px; }
-.project { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.06); text-align:left; }
-.project-img { width:100%; height:160px; background:#ddd; border-radius:10px; margin-bottom:15px; }
-.project-link { color:#007bff; font-weight:bold; text-decoration:none; }
-.project-link:hover { text-decoration:underline; }
+.primary:hover {
+    background: #0067d6;
+}
 
+.outline {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
 
-.contact-icons a { margin:0 10px; font-size:18px; color:#333; text-decoration:none; }
-.contact-icons a:hover { color:#007bff; }
+.outline:hover {
+    background: #e8f1ff;
+}
 
+/* ------------------ SECTIONS ------------------ */
+section {
+    padding: 90px 40px;
+    text-align: center;
+}
 
-footer { padding:20px; background:#eee; text-align:center; font-size:14px; color:#555; }
-</style>
+h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+p {
+    max-width: 760px;
+    margin: auto;
+    color: #444;
+    line-height: 1.65;
+}
+
+.gray-section {
+    background: #f2f2f2;
+}
+
+/* ------------------ SKILLS ------------------ */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.skill {
+    background: #fff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* ------------------ PROJECTS ------------------ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.project {
+    background: #fff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 170px;
+    background: #ddd;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ------------------ CONTACT ------------------ */
+.contact-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #007bff;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    padding: 22px;
+    background: #eee;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 12px 25px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
