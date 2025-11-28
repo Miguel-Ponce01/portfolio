@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Anthon Miguel Ponce (Arcade)</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode">
+<body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">MyPortfolio</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <button id="theme-toggle" class="btn ghost">Toggle Mode</button>
-        </div>
-    </nav>
+<header class="container">
+  <div class="brand">
+    <div class="logo">AMP</div>
+    <h1>Anthon Miguel Ponce</h1>
+  </div>
 
-    <!-- HERO SECTION -->
-    <section class="hero-card">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hello! I’m Anthon, a BSIS student passionate about creating clean, pixel-perfect user experiences. Explore my projects and work!</p>
-        <button class="btn primary">View Projects</button>
-        <button class="btn ghost">Contact Me</button>
-    </section>
+  <nav id="mainNav">
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-        <div class="project-card card">
-            <h3>Project One</h3>
-            <p>A short description of your first project. Technologies used, key features, etc.</p>
-        </div>
-        <div class="project-card card">
-            <h3>Project Two</h3>
-            <p>A short description of your second project. Technologies used, key features, etc.</p>
-        </div>
-        <div class="project-card card">
-            <h3>Project Three</h3>
-            <p>A short description of your third project. Technologies used, key features, etc.</p>
-        </div>
-    </section>
+  <div style="display:flex;align-items:center;gap:10px">
+    <button id="toggleMode" class="btn ghost">Light Mode</button>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="card">
-        <h3>Contact Me</h3>
-        <p>Email: amPonce@mcm.edu.ph</p>
-        <p>Phone: +63 9272429948</p>
-        <p>GitHub: <a href="https://github.com/green-ngl" target="_blank">green-ngl</a></p>
-    </section>
+<main class="container">
+  <section id="about" class="hero">
+    <div class="hero-card fade-up">
+      <h2>Hello, I'm <span style="color:var(--accent)">Anthon</span></h2>
+      <p class="lead">BSIS student passionate about building clean, pixel-perfect user experiences. I enjoy full-stack projects, automation, and anything with retro vibes.</p>
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#projects" class="btn primary">VIEW PROJECTS</a>
+        <a href="#contact" class="btn ghost">CONTACT</a>
+      </div>
+    </div>
 
-    <!-- JS -->
-    <script src="script.js"></script>
+    <div class="hero-photo fade-up">
+      <img src="https://i.ibb.co/3fg7wQZ/your-photo.jpg" alt="Anthon photo">
+      <div class="frame"></div>
+      <div class="pixel-deco" style="top:8px;left:8px"></div>
+      <div class="pixel-deco" style="bottom:10px;right:12px;background:var(--accent-2)"></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">SKILLS</h2>
+    <p class="lead">Technologies and tools I use daily.</p>
+    <div class="grid skills-grid" style="margin-top:18px">
+      <div class="card fade-up"><div class="title">HTML</div><p>Semantic markup & accessibility</p></div>
+      <div class="card fade-up"><div class="title">CSS</div><p>Layouts, animations, & themes</p></div>
+      <div class="card fade-up"><div class="title">JavaScript</div><p>Interactive front-ends</p></div>
+      <div class="card fade-up"><div class="title">Python</div><p>Scripting & data processing</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">PROJECTS</h2>
+    <p class="lead">A selection of projects with real screenshots.</p>
+    <div class="grid projects-grid" style="margin-top:18px">
+      <article class="project fade-up">
+        <img class="project-img" src="https://i.ibb.co/2tQZfdH/project1.jpg" alt="Project 1">
+        <h3>Student Management System</h3>
+        <div class="meta">HTML · JS · PHP</div>
+        <a class="project-link" href="#">View Project →</a>
+      </article>
+      <article class="project fade-up">
+        <img class="project-img" src="https://i.ibb.co/yVrkX6D/project2.jpg" alt="Project 2">
+        <h3>Personal Portfolio</h3>
+        <div class="meta">HTML · CSS · JS</div>
+        <a class="project-link" href="#">View Project →</a>
+      </article>
+      <article class="project fade-up">
+        <img class="project-img" src="https://i.ibb.co/3RFdXSV/project3.jpg" alt="Project 3">
+        <h3>Inventory System</h3>
+        <div class="meta">Python · Flask · SQL</div>
+        <a class="project-link" href="#">View Project →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="lead">Reach out — I’m open to collaborations and freelance work.</p>
+    <div style="display:flex;justify-content:center;gap:12px;margin-top:14px">
+      <a class="btn ghost" href="#">Facebook</a>
+      <a class="btn ghost" href="#">Instagram</a>
+      <a class="btn ghost" href="#">Email</a>
+    </div>
+  </section>
+</main>
+
+<footer style="padding:30px 0;text-align:center;color:var(--muted);">© 2025 Anthon Miguel Ponce · BSIS Student</footer>
+
+<!-- back to top -->
+<div id="backToTop">▲</div>
+
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
