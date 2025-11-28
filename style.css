@@ -1,10 +1,16 @@
 /* =========================================
-   Responsive Portfolio CSS - Light & Dark Mode
+   Responsive Portfolio CSS - Retro Arcade Style
 ========================================= */
 
 /* ==========================
+   IMPORT FONTS
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* ==========================
    BASE VARIABLES
-=========================== */
+========================== */
 :root {
     --transition-speed: 0.3s;
     --font-primary: 'Rubik', sans-serif;
@@ -13,7 +19,7 @@
 
 /* ==========================
    LIGHT MODE VARIABLES
-=========================== */
+========================== */
 body.light-mode {
     --bg-primary: #F5F5F5;
     --bg-secondary: #FFFFFF;
@@ -37,7 +43,7 @@ body.light-mode {
 
 /* ==========================
    DARK MODE VARIABLES
-=========================== */
+========================== */
 body.dark-mode {
     --bg-primary: #121212;
     --bg-secondary: #1E1E1E;
@@ -61,7 +67,7 @@ body.dark-mode {
 
 /* ==========================
    GLOBAL STYLES
-=========================== */
+========================== */
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -69,6 +75,15 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color var(--transition-speed), color var(--transition-speed);
+    /* Retro pixel background lines */
+    background-image: repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.02),
+        rgba(0,0,0,0.02) 1px,
+        transparent 1px,
+        transparent 4px
+    );
+    background-size: cover;
 }
 
 .container {
@@ -88,15 +103,17 @@ a:hover {
 
 /* ==========================
    HEADINGS
-=========================== */
+========================== */
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading);
     margin: 0 0 12px 0;
+    font-family: var(--font-retro);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* ==========================
    PARAGRAPHS / TEXT
-=========================== */
+========================== */
 p, span, li {
     color: var(--text-primary);
     line-height: 1.6;
@@ -109,7 +126,7 @@ small, .muted {
 
 /* ==========================
    BUTTONS
-=========================== */
+========================== */
 .btn {
     cursor: pointer;
     font-family: var(--font-retro);
@@ -118,17 +135,19 @@ small, .muted {
     border-radius: 6px;
     transition: all var(--transition-speed);
     font-size: 12px;
+    text-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
 
 /* Primary Buttons */
 .btn.primary {
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     color: #fff;
-    border: none;
-    text-shadow: 0 0 6px rgba(0,0,0,0.3);
+    border: 2px solid var(--accent-2);
+    text-shadow: 0 0 8px var(--accent);
 }
 .btn.primary:hover {
     opacity: 0.9;
+    box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent-2);
 }
 
 /* Ghost Buttons */
@@ -139,11 +158,12 @@ small, .muted {
 }
 .btn.ghost:hover {
     color: var(--accent-2);
+    text-shadow: 0 0 6px var(--accent);
 }
 
 /* ==========================
    NAVIGATION
-=========================== */
+========================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -165,6 +185,7 @@ header {
     height: 40px;
     background: var(--accent);
     border-radius: 8px;
+    box-shadow: 0 0 8px var(--accent);
 }
 
 #mainNav {
@@ -194,7 +215,7 @@ header {
 
 /* ==========================
    HERO SECTION
-=========================== */
+========================== */
 .hero {
     display: flex;
     gap: 30px;
@@ -209,8 +230,9 @@ header {
     padding: 30px;
     background: var(--bg-secondary);
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     text-align: center;
+    border: 2px solid var(--accent);
 }
 
 .hero-photo {
@@ -219,6 +241,8 @@ header {
     height: 250px;
     border-radius: 16px;
     overflow: hidden;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 12px var(--accent);
 }
 
 .hero-photo img {
@@ -236,6 +260,7 @@ header {
     border: 3px solid var(--accent);
     border-radius: 16px;
     pointer-events: none;
+    box-shadow: 0 0 8px var(--accent), 0 0 16px var(--accent-2);
 }
 
 .pixel-deco {
@@ -246,6 +271,9 @@ header {
     box-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
 
+/* ==========================
+   ANIMATIONS
+========================== */
 .fade-up {
     opacity: 0;
     transform: translateY(20px);
@@ -261,7 +289,7 @@ header {
 
 /* ==========================
    SECTIONS / CARDS
-=========================== */
+========================== */
 section {
     margin-top: 60px;
 }
@@ -278,6 +306,8 @@ section {
 .card .title, .project h3 {
     font-weight: 700;
     margin-bottom: 8px;
+    font-family: var(--font-retro);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 /* GRIDS */
@@ -306,6 +336,7 @@ footer {
     margin-top: 60px;
     text-align: center;
     color: var(--muted);
+    font-family: var(--font-retro);
 }
 
 /* BACK TO TOP */
@@ -324,7 +355,7 @@ footer {
 
 /* ==========================
    RESPONSIVE MEDIA QUERIES
-=========================== */
+========================== */
 @media screen and (max-width: 1024px) {
     .hero {
         flex-direction: column-reverse;
