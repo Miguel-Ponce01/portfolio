@@ -1,1 +1,140 @@
 
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --accent: #0077ff;
+  --card-bg: #f7f7f7;
+  --header-bg: #eaeaea;
+  --pixel-font: 'Press Start 2P', cursive;
+
+  --transition: 0.35s ease;
+}
+
+/* Morning Theme */
+html[data-theme="morning"] {
+  --bg: #fff7e6;
+  --text: #333;
+  --accent: #ff9900;
+  --card-bg: #ffecc2;
+  --header-bg: #ffe1a8;
+}
+
+/* Night Theme */
+html[data-theme="night"] {
+  --bg: #0d0d0d;
+  --text: #f2f2f2;
+  --accent: #66ccff;
+  --card-bg: #1a1a1a;
+  --header-bg: #111;
+}
+
+/* Retro Pixel Theme */
+html[data-theme="retro"] {
+  --bg: #c0ffc5;
+  --text: #1b1b1b;
+  --accent: #ff0040;
+  --card-bg: #97ff9f;
+  --header-bg: #7cff96;
+}
+
+/* ---------- GLOBAL ---------- */
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  transition: background var(--transition), color var(--transition);
+}
+
+h1, h2, h3 {
+  font-family: var(--pixel-font);
+  color: var(--accent);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-bg);
+  padding: 1.2rem 2rem;
+  border-bottom: 4px solid var(--accent);
+  transition: background var(--transition);
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* ---------- THEME BUTTONS ---------- */
+
+.theme-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.theme-btn {
+  font-size: 1.3rem;
+  padding: 0.5rem 0.7rem;
+  border: 2px solid var(--accent);
+  background: var(--card-bg);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background var(--transition), transform 0.2s;
+}
+
+.theme-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero span {
+  color: var(--accent);
+}
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 3px solid var(--accent);
+  transition: transform 0.25s, background var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
