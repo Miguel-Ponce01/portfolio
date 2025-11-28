@@ -1,75 +1,96 @@
-
 <!DOCTYPE html>
-<html lang="en" data-theme="morning">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-
-  <!-- Pixel font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="header">
-    <h1 class="logo">GreenNGL</h1>
 
-    <div class="theme-selector">
-      <button class="theme-btn" data-theme="morning">☀️</button>
-      <button class="theme-btn" data-theme="night">🌙</button>
-      <button class="theme-btn" data-theme="retro">🕹️</button>
-    </div>
-  </header>
+<header>
+<h3>Your Name</h3>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-  <main>
 
-    <section class="hero">
-      <h2>Hello, I'm <span>Green</span> 👋</h2>
-      <p>Welcome to my portfolio — playful, pixel, and professional.</p>
-    </section>
+<section class="hero">
+<div>
+<h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+<p>A passionate Web Developer creating modern and responsive websites.</p>
+<a class="btn primary" href="#projects">View Projects</a>
+<a class="btn outline" href="#contact">Contact Me</a>
+</div>
+<div>
+<div class="hero-img"></div>
+</div>
+</section>
 
-    <section class="section about">
-      <h2>About Me</h2>
-      <p>
-        I'm a developer/designer who enjoys creating fun, visually pleasing,
-        and interactive digital experiences. Check out some of my recent work below!
-      </p>
-    </section>
 
-    <section class="section projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Project 1</h3>
-          <p>A cool project I built using creative design and clean code.</p>
-        </div>
+<section id="about" class="center-section">
+<h2>About Me</h2>
+<p>Write a short description about yourself here. Mention your experience, passion, and what you enjoy doing as a developer.</p>
+</section>
 
-        <div class="card">
-          <h3>Project 2</h3>
-          <p>Another awesome project with awesome logic and visuals.</p>
-        </div>
 
-        <div class="card">
-          <h3>Project 3</h3>
-          <p>More work, more creativity, more code.</p>
-        </div>
-      </div>
-    </section>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-grid">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React</div>
+<div class="skill">TailwindCSS</div>
+<div class="skill">Node.js</div>
+<div class="skill">Git</div>
+<div class="skill">Python</div>
+</div>
+</section>
 
-    <section class="section contact">
-      <h2>Contact</h2>
-      <p>You can reach me at:</p>
-      <p><strong>Email:</strong> youremail@example.com</p>
-    </section>
 
-  </main>
+<section id="projects" class="gray-section">
+<h2>Projects</h2>
+<div class="projects-grid">
+<div class="project">
+<div class="project-img"></div>
+<h3>Project Title 1</h3>
+<p>Short project description goes here.</p>
+<a class="project-link" href="#">View More →</a>
+</div>
 
-  <footer>
-    © 2025 GreenNGL — Built with ❤️ and pixels.
-  </footer>
 
-  <script src="theme.js"></script>
+<div class="project">
+<div class="project-img"></div>
+<h3>Project Title 2</h3>
+<p>Short project description goes here.</p>
+<a class="project-link" href="#">View More →</a>
+</div>
+</div>
+</section>
+
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Feel free to reach out through any platform below.</p>
+<div class="contact-icons">
+<a href="https://github.com/yourname">GitHub</a>
+<a href="https://linkedin.com">LinkedIn</a>
+<a href="mailto:youremail@example.com">Email</a>
+</div>
+</section>
+
+
+<footer>
+© 2025 Your Name. All rights reserved.
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
