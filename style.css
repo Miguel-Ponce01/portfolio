@@ -80,13 +80,55 @@ nav a:hover{color:#fff;text-shadow:var(--glow);transform:translateY(-2px);}
 .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;}
 .hamburger span{width:26px;height:3px;background:var(--text);display:block;border-radius:2px;box-shadow:0 0 6px rgba(0,0,0,0.6);}
 
-.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;padding:110px 20px 60px;align-items:center;}
-.hero-card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:28px;border-radius:12px;box-shadow:var(--glow);border:2px solid rgba(255,255,255,0.02);}
-.hero h2{font-family:'Press Start 2P';font-size:20px;margin:0 0 14px;}
-.hero p{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 18px;}
-.btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-size:12px;letter-spacing:0.6px;}
-.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:var(--glow);border:1px solid rgba(255,255,255,0.06);}
-.btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,0.06);color:var(--text);}
+/* Hero section typography */
+.hero-card h2 {
+    font-family: 'Press Start 2P', monospace; /* retro arcade font */
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+/* Paragraph text inside hero */
+.hero-card p {
+    font-family: 'Rubik', sans-serif; /* clean readable font */
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+/* Buttons in hero */
+.hero-card .btn.primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    text-shadow: 0 0 6px rgba(255,255,255,0.5);
+}
+
+.hero-card .btn.ghost {
+    color: var(--accent);
+    border: 1px dashed rgba(255,255,255,0.2);
+}
+
+/* Light mode overrides */
+body.light-mode .hero-card h2 {
+    color: #ff0066; /* vibrant pink for light mode */
+}
+
+body.light-mode .hero-card p {
+    color: #002b2b; /* dark readable text */
+}
+
+body.light-mode .hero-card .btn.primary {
+    text-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+body.light-mode .hero-card .btn.ghost {
+    color: #0066ff; /* accent blue in light mode */
+}
+
 
 .hero-photo {
     width: 100%;
