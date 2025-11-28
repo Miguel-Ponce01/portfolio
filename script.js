@@ -1,41 +1,78 @@
-// Dark / Light Arcade Mode
+// ==========================
+// DARK / LIGHT ARCADE MODE
+// ==========================
 const toggleMode = document.getElementById('toggleMode');
 const body = document.body;
-if(localStorage.getItem('arcadeMode') === 'light') body.classList.add('light-mode'), toggleMode.textContent='Dark Mode';
-else toggleMode.textContent='Light Mode';
-toggleMode.addEventListener('click', ()=>{
-  const isLight = body.classList.toggle('light-mode');
-  toggleMode.textContent = isLight ? 'Dark Mode' : 'Light Mode';
-  localStorage.setItem('arcadeMode', isLight ? 'light' : 'dark');
+
+// Set initial mode from localStorage
+if(localStorage.getItem('arcadeMode') === 'light') {
+    body.classList.add('light-mode');
+    toggleMode.textContent = 'Dark Mode';
+} else {
+    body.classList.remove('light-mode');
+    toggleMode.textContent = 'Light Mode';
+}
+
+// Toggle on click
+toggleMode.addEventListener('click', () => {
+    const isLight = body.classList.toggle('light-mode');
+    toggleMode.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+    localStorage.setItem('arcadeMode', isLight ? 'light' : 'dark');
 });
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e=>{
-  const href = a.getAttribute('href');
-  if(href.startsWith('#')){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'}); }
-}));
+// ==========================
+// SMOOTH SCROLL
+// ==========================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+    });
+});
 
-// Fade-up animation
+// ==========================
+// FADE-UP ANIMATION
+// ==========================
 const faders = document.querySelectorAll('.fade-up');
-const io = new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('show'); io.unobserve(en.target);}});},{threshold:0.18});
-faders.forEach(f=>io.observe(f));
+const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show');
+            io.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.18 });
 
-// Back to top
+faders.forEach(f => io.observe(f));
+
+// ==========================
+// BACK TO TOP BUTTON
+// ==========================
 const back = document.getElementById('backToTop');
-window.addEventListener('scroll', ()=>{back.style.display = window.scrollY > 360 ? 'flex' : 'none';});
-back.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+window.addEventListener('scroll', () => {
+    back.style.display = window.scrollY > 360 ? 'flex' : 'none';
+});
+back.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-// Hamburger menu
+// ==========================
+// HAMBURGER MENU TOGGLE
+// ==========================
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('mainNav');
-hamburger.addEventListener('click', ()=>{
-  nav.style.display = nav.style.display==='flex' ? 'none':'flex';
-  nav.style.flexDirection='column';
-  nav.style.position='absolute';
-  nav.style.top='76px';
-  nav.style.right='22px';
-  nav.style.background='var(--card)';
-  nav.style.padding='12px';
-  nav.style.borderRadius='10px';
-  nav.style.boxShadow='var(--glow)';
+
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show'); // Use CSS "show" class for responsive menu
+});
+
+// OPTIONAL: Close menu when clicking a link (for mobile)
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        if(window.innerWidth <= 768) nav.classList.remove('show');
+    });
 });
