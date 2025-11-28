@@ -11,11 +11,12 @@
 <!-- CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
 
+<!-- HEADER / NAVIGATION -->
 <header class="container">
   <div class="brand">
-    <div class="logo"></></div>
+    <div class="logo"></div>
     <h1>Anthon Miguel Ponce</h1>
   </div>
 
@@ -32,7 +33,10 @@
   </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <main class="container">
+
+  <!-- HERO SECTION -->
   <section id="about" class="hero">
     <div class="hero-card fade-up">
       <h2>Hello, I'm <span style="color:var(--accent)">Anthon</span></h2>
@@ -46,22 +50,38 @@
     <div class="hero-photo fade-up">
       <img src="Photoprof.png" alt="Anthon photo">
       <div class="frame"></div>
-      <div class="pixel-deco" style="top:8px;left:8px"></div>
-      <div class="pixel-deco" style="bottom:10px;right:12px;background:var(--accent-2)"></div>
+      <div class="pixel-deco" style="top:8px; left:8px; background:var(--accent)"></div>
+      <div class="pixel-deco" style="top:12px; right:16px; background:var(--accent-2)"></div>
+      <div class="pixel-deco" style="bottom:10px; left:14px; background:var(--accent)"></div>
+      <div class="pixel-deco" style="bottom:12px; right:12px; background:var(--accent-2)"></div>
     </div>
   </section>
 
+  <!-- SKILLS SECTION -->
   <section id="skills">
     <h2 class="section-title">SKILLS</h2>
     <p class="lead">Technologies and tools I use daily.</p>
     <div class="grid skills-grid" style="margin-top:18px">
-      <div class="card fade-up"><div class="title">HTML</div><p>Semantic markup & accessibility</p></div>
-      <div class="card fade-up"><div class="title">CSS</div><p>Layouts, animations, & themes</p></div>
-      <div class="card fade-up"><div class="title">JavaScript</div><p>Interactive front-ends</p></div>
-      <div class="card fade-up"><div class="title">Python</div><p>Scripting & data processing</p></div>
+      <div class="card fade-up">
+        <div class="title">HTML</div>
+        <p>Semantic markup & accessibility</p>
+      </div>
+      <div class="card fade-up">
+        <div class="title">CSS</div>
+        <p>Layouts, animations, & themes</p>
+      </div>
+      <div class="card fade-up">
+        <div class="title">JavaScript</div>
+        <p>Interactive front-ends</p>
+      </div>
+      <div class="card fade-up">
+        <div class="title">Python</div>
+        <p>Scripting & data processing</p>
+      </div>
     </div>
   </section>
 
+  <!-- PROJECTS SECTION -->
   <section id="projects">
     <h2 class="section-title">PROJECTS</h2>
     <p class="lead">A selection of projects with real screenshots.</p>
@@ -87,20 +107,25 @@
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact">
     <h2 class="section-title">CONTACT</h2>
     <p class="lead">Reach out — I’m open to collaborations and freelance work.</p>
-    <div style="display:flex;justify-content:center;gap:12px;margin-top:14px">
-     <a class="btn ghost" href="#">https://www.facebook.com/sargepnc/</a>
-      <a class="btn ghost" href="#">https://www.instagram.com/dvr7000/?
-    <a class="btn ghost" href="#">amPonce@mcm.edu.ph</a>
+    <div style="display:flex;justify-content:center;gap:12px;margin-top:14px;flex-wrap:wrap">
+      <a class="btn ghost" href="https://www.facebook.com/sargepnc/">Facebook</a>
+      <a class="btn ghost" href="https://www.instagram.com/dvr7000/">Instagram</a>
+      <a class="btn ghost" href="mailto:amPonce@mcm.edu.ph">Email Me</a>
     </div>
   </section>
+
 </main>
 
-<footer style="padding:30px 0;text-align:center;color:var(--muted);">© 2025 Anthon Miguel Ponce · BSIS MMCM Student</footer>/footer>
+<!-- FOOTER -->
+<footer style="padding:30px 0;text-align:center;color:var(--muted);">
+  © 2025 Anthon Miguel Ponce · BSIS MMCM Student
+</footer>
 
-<!-- back to top -->
+<!-- BACK TO TOP -->
 <div id="backToTop">▲</div>
 
 <!-- JS -->
