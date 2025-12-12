@@ -12,25 +12,25 @@
    ROOT VARIABLES
 ========================== */
 :root {
-  /* DARK MODE DEFAULT */
-  --bg:#07070a;
-  --card:#0d0d14;
-  --text:#33ff99;
-  --accent:#ff33cc;
-  --accent-2:#00e6ff;
-  --muted:#9aa3a6;
-  --glow:0 0 8px var(--accent),0 0 20px var(--accent-2);
-  --scanline: repeating-linear-gradient(to bottom, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
-  --overlay: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%);
-  --hero-border:#000;
-  --card-border:rgba(255,255,255,0.02);
-  --btn-text:#fff;
+  /* DARK MODE DEFAULT - MODIFIED FOR AESTHETIC DARK NEUTRAL */
+  --bg:#121212; /* Very dark gray for background */
+  --card:#1f1f1f; /* Slightly lighter dark gray for cards */
+  --text:#f5f5f5; /* Near white for main text */
+  --accent:#bb86fc; /* A subtle, aesthetic purple for primary accent */
+  --accent-2:#03dac6; /* A teal/mint for secondary accent */
+  --muted:#a0a0a0; /* Neutral gray for muted text */
+  --glow:0 0 8px rgba(187, 134, 252, 0.4),0 0 20px rgba(3, 218, 198, 0.3); /* Subtle glow using new accents */
+  --scanline: repeating-linear-gradient(to bottom, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 3px); /* Less prominent scanline */
+  --overlay: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5) 100%); /* Softer overlay */
+  --hero-border:#2e2e2e; /* Darker border */
+  --card-border:rgba(255,255,255,0.08); /* More visible, subtle card border */
+  --btn-text:#121212; /* Dark text for primary button */
   --btn-bg: linear-gradient(90deg,var(--accent),var(--accent-2));
-  --btn-ghost-border: rgba(255,255,255,0.06);
-  --btn-ghost-text: var(--text);
+  --btn-ghost-border: rgba(255,255,255,0.15); /* More visible ghost border */
+  --btn-ghost-text: var(--accent); /* Ghost button text uses accent color */
 }
 
-/* LIGHT MODE VARIABLES */
+/* LIGHT MODE VARIABLES (KEEPING ORIGINAL FOR CONSISTENCY) */
 body.light-mode {
   --bg:#f6f3ff;
   --card:#fff1ff;
