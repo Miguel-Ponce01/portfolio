@@ -11,7 +11,8 @@ window.addEventListener('scroll', () => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
     
-    if (window.scrollY >= sectionTop - 100) {
+    // Adjusted offset for smoother triggering on scroll
+    if (window.scrollY >= sectionTop - 150) {
       current = section.getAttribute('id');
     }
   });
@@ -31,61 +32,38 @@ const toggleMode = document.getElementById('toggleMode');
 const body = document.body;
 const icon = toggleMode.querySelector('i');
 
-// Check for saved mode preference, default to dark
+// Default to dark mode as per the user's sleek portfolio preference
 const savedMode = localStorage.getItem('themeMode') || 'dark';
 if (savedMode === 'light') {
     body.classList.add('light-mode');
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-moon');
-} else {
-    body.classList.remove('light-mode');
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
 }
 
-// Toggle mode on button click
 toggleMode.addEventListener('click', () => {
     const isLightMode = body.classList.toggle('light-mode');
     
     if (isLightMode) {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
+        icon.classList.replace('fa-sun', 'fa-moon');
         localStorage.setItem('themeMode', 'light');
     } else {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+        icon.classList.replace('fa-moon', 'fa-sun');
         localStorage.setItem('themeMode', 'dark');
     }
 });
 
 // ==========================
-// SMOOTH SCROLL
-// ==========================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href.startsWith('#') && href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    });
-});
-
-// ==========================
-// TYPING EFFECT
+// TYPING EFFECT (UPDATED)
 // ==========================
 const typingText = document.querySelector('.typing-text');
 if (typingText) {
-    const texts = ['Full-Stack Developer', 'BSIS Student', 'Web Designer', 'Problem Solver'];
+    // Updated strings to reflect your academic background at MMCM
+    const texts = [
+        'Full-Stack Developer', 
+        'Information Systems Student', 
+        'Web Designer', 
+        'Problem Solver'
+    ];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -106,7 +84,7 @@ if (typingText) {
 
         if (!isDeleting && charIndex === currentText.length) {
             isDeleting = true;
-            typingSpeed = 2000;
+            typingSpeed = 2000; // Pause at the end of the word
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
@@ -120,11 +98,12 @@ if (typingText) {
 }
 
 // ==========================
-// FADE-UP ANIMATION ON SCROLL
+// FADE-UP ANIMATION (Intersection Observer)
 // ==========================
+// This automatically applies to your new KhenzoVan project card
 const fadeElements = document.querySelectorAll('.fade-up');
 const observerOptions = {
-    threshold: 0.1,
+    threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
 };
 
@@ -141,105 +120,46 @@ fadeElements.forEach(element => {
 });
 
 // ==========================
-// BACK TO TOP BUTTON
+// BACK TO TOP & HEADER EFFECTS
 // ==========================
 const backToTopButton = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-        backToTopButton.style.display = 'flex';
-    } else {
-        backToTopButton.style.display = 'none';
-    }
-});
-
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// ==========================
-// HAMBURGER MENU TOGGLE (MOBILE)
-// ==========================
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('mainNav');
-
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
-    hamburger.classList.toggle('active');
-});
-
-// Close menu when clicking a navigation link
-nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-            nav.classList.remove('show');
-            hamburger.classList.remove('active');
-        }
-    });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        nav.classList.remove('show');
-        hamburger.classList.remove('active');
-    }
-});
-
-// ==========================
-// HEADER SCROLL EFFECT
-// ==========================
 const header = document.querySelector('header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    
-    if (currentScroll > 50) {
-        header.style.padding = '15px 0';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    // Show back to top button
+    backToTopButton.style.display = window.scrollY > 500 ? 'flex' : 'none';
+
+    // Header scroll compression
+    if (window.scrollY > 50) {
+        header.style.padding = '12px 0';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
     } else {
         header.style.padding = '20px 0';
         header.style.boxShadow = 'none';
     }
-    
-    lastScroll = currentScroll;
+});
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // ==========================
-// CURSOR EFFECT (OPTIONAL)
+// MOBILE MENU LOGIC
 // ==========================
-const cursor = document.createElement('div');
-cursor.classList.add('cursor');
-document.body.appendChild(cursor);
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('mainNav');
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        hamburger.classList.toggle('active');
+    });
 
-// Add cursor styles dynamically
-const style = document.createElement('style');
-style.textContent = `
-    .cursor {
-        width: 20px;
-        height: 20px;
-        border: 2px solid var(--accent);
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        transition: all 0.1s ease;
-        transform: translate(-50%, -50%);
-    }
-    
-    @media (max-width: 768px) {
-        .cursor {
-            display: none;
-        }
-    }
-`;
-document.head.appendChild(style);
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('show');
+            hamburger.classList.remove('active');
+        });
+    });
+}
