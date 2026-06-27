@@ -1,254 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthon Miguel Ponce - Portfolio</title>
+  <title>Anthon Miguel Ponce - Full-Stack Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Anthon Miguel Ponce, a BSIS student and passionate Full-Stack Developer specializing in clean, interactive web applications and automation." />
+  <meta name="keywords"
+    content="Anthon Miguel Ponce, Full-Stack Developer, BSIS, Portfolio, Web Development, Automation, Davao City" />
+  <meta name="author" content="Anthon Miguel Ponce" />
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anthon Miguel Ponce - Portfolio" />
+  <meta property="og:description"
+    content="Full-Stack Developer portfolio showcasing dynamic web apps, database management, and professional certifications." />
+  <meta property="og:image" content="assets/Photoprof.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Anthon Miguel Ponce - Portfolio" />
+  <meta property="twitter:description"
+    content="Full-Stack Developer portfolio showcasing dynamic web apps, database management, and professional certifications." />
+  <meta property="twitter:image" content="assets/Photoprof.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <div class="container">
-    <div class="brand">
-      <h1>Anthon</h1>
+  <div id="scrollProgressBar"></div>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <a href="#home" class="logo-container">
+          <span class="logo-ap">AP</span>
+        </a>
+      </div>
+
+      <nav id="mainNav">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="toggleMode" class="mode-toggle" aria-label="Toggle Dark/Light Mode">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <div class="hamburger" id="hamburger" aria-label="Menu Toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <nav id="mainNav">
-      <a href="#home" class="active">Home</a>
-      <a href="#services">Services</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <main>
 
-    <div class="header-actions">
-      <button id="toggleMode" class="mode-toggle">
-        <i class="fas fa-sun"></i>
-      </button>
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
 
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+          <div class="hero-image-container">
+            <div class="hero-circle"></div>
+            <div class="hero-image">
+              <img src="assets/Photoprof.png" alt="Anthon Miguel Ponce" />
+            </div>
+          </div>
+
+          <div class="hero-text">
+            <h1 class="hero-title">Hi, It's <span class="highlight">Miguel</span></h1>
+            <h2 class="hero-subtitle">I'm a <span class="typing-text">Junior Full-Stack Developer</span></h2>
+            <p class="hero-description">
+              I am a junior full-stack developer, UI/UX designer, and database analyst who loves turning complex problems into clean, organized results.
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/sargepnc/" target="_blank" class="social-icon"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/dvr7000/" target="_blank" class="social-icon"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="mailto:amPonce@mcm.edu.ph" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <a href="#contact" class="cta-button">Hire me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="about-services-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About & Services</h2>
+          <p class="section-description">Who I am & What I do</p>
+        </div>
+
+        <div class="about-services-content">
+          <div class="about-column fade-up">
+            <h3>About Me</h3>
+            <p>
+              I'm Anthon Miguel Ponce, a passionate junior full-stack developer and Information Systems student dedicated to crafting elegant, high-performance web applications, interactive user interfaces, and database analysis solutions.
+            </p>
+            <p>
+              Combining technical expertise with a keen eye for modern design systems, I bridge the gap between user-experience layouts and robust database systems. I'm always looking to refine my craft and solve complex problems.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num">4+</span>
+                <span class="stat-label">Years Learning</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="services-column fade-up">
+            <h3>Your one stop shop for:</h3>
+
+            <div class="accordion-container">
+              <div class="accordion-item active">
+                <div class="accordion-header">
+                  <span class="accordion-num">①</span>
+                  <h4>Web Development</h4>
+                  <i class="fas fa-chevron-down accordion-arrow"></i>
+                </div>
+                <div class="accordion-body" style="max-height: 200px;">
+                  <p>
+                    High-performance, responsive web applications engineered with Next.js, React, and Tailwind CSS.
+                    Seamless API integrations, state management, and optimized build setups.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <span class="accordion-num">②</span>
+                  <h4>UI / UX Design</h4>
+                  <i class="fas fa-chevron-down accordion-arrow"></i>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    Intuitive design systems, wireframes, and high-fidelity interactive prototypes designed in Figma.
+                    Focused on custom layouts, glassmorphism, and GSAP-powered animations.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <span class="accordion-num">③</span>
+                  <h4>Database & Automation</h4>
+                  <i class="fas fa-chevron-down accordion-arrow"></i>
+                </div>
+                <div class="accordion-body">
+                  <p>
+                    Real-time cloud databases and backend architectures using Supabase and Firebase. Automated server
+                    tasks, scripts, and CRM/decision-support integrations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Ticker Bar -->
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          <span>React</span><span>·</span>
+          <span>Next.js</span><span>·</span>
+          <span>Tailwind CSS</span><span>·</span>
+          <span>Supabase</span><span>·</span>
+          <span>Firebase</span><span>·</span>
+          <span>Figma</span><span>·</span>
+          <span>Java</span><span>·</span>
+          <span>Python</span><span>·</span>
+          <span>Git</span><span>·</span>
+          <span>GSAP</span><span>·</span>
+          <span>PostgreSQL</span><span>·</span>
+          <!-- Repeated items for infinite animation loop -->
+          <span>React</span><span>·</span>
+          <span>Next.js</span><span>·</span>
+          <span>Tailwind CSS</span><span>·</span>
+          <span>Supabase</span><span>·</span>
+          <span>Firebase</span><span>·</span>
+          <span>Figma</span><span>·</span>
+          <span>Java</span><span>·</span>
+          <span>Python</span><span>·</span>
+          <span>Git</span><span>·</span>
+          <span>GSAP</span><span>·</span>
+          <span>PostgreSQL</span><span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-description">Technologies I work with</p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Using Now Category -->
+          <div class="skills-group fade-up">
+            <h3 class="skills-group-title">USING NOW:</h3>
+            <div class="skills-logo-grid">
+              <div class="skill-logo-item">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-react-original colored"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-nextjs-plain"></i>
+                <span>Next.js</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-tailwindcss-original colored"></i>
+                <span>Tailwind</span>
+              </div>
+              <div class="skill-logo-item">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#88CE02">
+                  <path
+                    d="M12 0a12 12 0 100 24 12 12 0 000-24zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm.052 3.197c-3.152 0-5.707 2.378-5.707 5.311s2.555 5.312 5.707 5.312c1.782 0 3.376-.763 4.453-1.974l-.946-.947c-.838.9-2.072 1.458-3.507 1.458-2.316 0-4.195-1.724-4.195-3.849 0-2.125 1.879-3.849 4.195-3.849 1.442 0 2.682.565 3.518 1.474l.945-.947c-1.077-1.222-2.678-1.988-4.464-1.988z" />
+                </svg>
+                <span>GSAP</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-figma-plain colored"></i>
+                <span>Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Learning & Backend Category -->
+          <div class="skills-group fade-up">
+            <h3 class="skills-group-title">LEARNING & CLOUD:</h3>
+            <div class="skills-logo-grid">
+              <div class="skill-logo-item">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-nodejs-plain colored"></i>
+                <span>NodeJS</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-supabase-plain colored"></i>
+                <span>Supabase</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-firebase-plain colored"></i>
+                <span>Firebase</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>Postgres</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming & Other Category -->
+          <div class="skills-group fade-up">
+            <h3 class="skills-group-title">OTHER LANGUAGES & TOOLS:</h3>
+            <div class="skills-logo-grid">
+              <div class="skill-logo-item">
+                <i class="devicon-java-plain colored"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-csharp-plain colored"></i>
+                <span>C#</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-logo-item">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Education</h2>
+          <p class="section-description">Academic background</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Bachelor of Science in Information Systems</h3>
+              <p class="timeline-location">Mapúa Malayan Colleges Mindanao</p>
+              <p class="timeline-date">2021 – Present</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-description">A collection of full-stack, desktop, and AI solutions I've developed</p>
+        </div>
+
+        <!-- Projects Filter -->
+        <div class="filter-container fade-up">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="ai">AI & Data</button>
+          <button class="filter-btn" data-filter="desktop">Desktop Apps</button>
+        </div>
+
+        <div id="projectsGrid" class="projects-grid">
+          <!-- Dynamic Projects rendered here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="certificates-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certificates</h2>
+          <p class="section-description">Professional credentials and academic milestones</p>
+        </div>
+
+        <!-- Certificates Filter -->
+        <div class="filter-container fade-up">
+          <button class="filter-btn active" data-filter="all">All Certificates</button>
+          <button class="filter-btn" data-filter="development">Development</button>
+          <button class="filter-btn" data-filter="language">Language</button>
+        </div>
+
+        <div id="certificatesGrid" class="certificates-grid">
+          <!-- Dynamic Certificates rendered here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-description">Let's work together</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info fade-up">
+            <div class="contact-item"><i class="fas fa-envelope"></i><a
+                href="mailto:amPonce@mcm.edu.ph">amPonce@mcm.edu.ph</a></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Davao City, Philippines</span></div>
+          </div>
+
+          <div class="social-links-large fade-up">
+            <a href="https://www.facebook.com/sargepnc/" target="_blank" class="social-link-large"><i
+                class="fab fa-facebook-f"></i><span>Facebook</span></a>
+            <a href="https://www.instagram.com/dvr7000/" target="_blank" class="social-link-large"><i
+                class="fab fa-instagram"></i><span>Instagram</span></a>
+            <a href="https://github.com" target="_blank" class="social-link-large"><i
+                class="fab fa-github"></i><span>GitHub</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Anthon Miguel Ponce · BSIS Student</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Project Details Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-overlay" onclick="closeProjectModal()"></div>
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+      <div class="modal-content">
+        <div class="modal-image">
+          <img src="" alt="Project Preview" />
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title"></h3>
+          <h4 class="modal-subtitle"></h4>
+          <div class="modal-tech-tags"></div>
+          <p class="modal-description"></p>
+          <div class="modal-actions">
+            <a href="#" target="_blank" class="modal-demo-btn cta-button"><i class="fas fa-external-link-alt"></i> Live
+              Demo</a>
+            <a href="#" target="_blank" class="modal-github-btn cta-button secondary-btn"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</header>
 
-<main>
-
-  <section id="home" class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-
-        <div class="hero-image-container">
-          <div class="hero-circle"></div>
-          <div class="hero-image">
-            <img src="Photoprof.png" alt="Anthon Miguel Ponce" />
-          </div>
-        </div>
-
-        <div class="hero-text">
-          <h1 class="hero-title">Hi, It's <span class="highlight">Miguel</span></h1>
-          <h2 class="hero-subtitle">I'm a <span class="typing-text">Full-Stack Developer</span></h2>
-          <p class="hero-description">
-            BSIS student passionate about building clean, modern, and interactive web applications. 
-            I enjoy full-stack development, automation, and UI-focused solutions.
-          </p>
-
-          <div class="social-links">
-            <a href="https://www.facebook.com/sargepnc/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/dvr7000/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:amPonce@mcm.edu.ph" class="social-icon"><i class="fas fa-envelope"></i></a>
-          </div>
-
-          <a href="#contact" class="cta-button">Hire me</a>
-        </div>
+  <!-- Certificate Lightbox Modal -->
+  <div id="lightboxModal" class="modal lightbox">
+    <div class="modal-overlay" onclick="closeLightbox()"></div>
+    <div class="lightbox-container">
+      <button class="modal-close" onclick="closeLightbox()">&times;</button>
+      <div class="lightbox-content">
+        <img src="" alt="Certificate View" class="lightbox-img" />
+        <p class="lightbox-caption"></p>
       </div>
     </div>
-  </section>
-
-  <section id="services" class="services-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Services</h2>
-        <p class="section-description">What I can do for you</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-icon"><i class="fas fa-code"></i></div>
-          <h3>Web Development</h3>
-          <p>Responsive and modern websites using clean and maintainable code.</p>
-        </div>
-
-        <div class="service-card fade-up">
-          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h3>UI / UX Design</h3>
-          <p>Designing intuitive interfaces that enhance user experience.</p>
-        </div>
-
-        <div class="service-card fade-up">
-          <div class="service-icon"><i class="fas fa-database"></i></div>
-          <h3>Database Management</h3>
-          <p>Efficient database design and data organization.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="skills-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-description">Technologies I work with</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card fade-up"><div class="skill-icon">💻</div><h3>HTML & CSS</h3><p>Modern layout & styling</p></div>
-        <div class="skill-card fade-up"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>Interactive web apps</p></div>
-        <div class="skill-card fade-up"><div class="skill-icon">🐍</div><h3>Python</h3><p>Backend & automation</p></div>
-        <div class="skill-card fade-up"><div class="skill-icon">🗄️</div><h3>SQL</h3><p>Database queries</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="education-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Education</h2>
-        <p class="section-description">Academic background</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Bachelor of Science in Information Systems</h3>
-            <p class="timeline-location">Mapúa Malayan Colleges Mindanao</p>
-            <p class="timeline-date">2021 – 2028</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="experience-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Experience</h2>
-        <p class="section-description">Projects I've worked on</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="project-card fade-up">
-          <div class="project-image">
-            <img src="machine-portal.png" alt="Machine Portal Activities" />
-          </div>
-          <div class="project-content">
-            <h3>Machine Portal Activities</h3>
-            <p class="project-tech">HTML · CSS · JavaScript</p>
-            <a href="https://machine_portal.oneapp.dev" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-image">
-            <img src="Sensestroke.png" alt="StrokeSense" />
-          </div>
-          <div class="project-content">
-            <h3>StrokeSense</h3>
-            <p class="project-tech">Health AI · Web Application</p>
-            <a href="https://strokesense.oneapp.dev/" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-image">
-            <img src="khenzo logo.jpg" alt="KenzoVan Agrivet Management Hub" />
-          </div>
-          <div class="project-content">
-            <h3>KenzoVan Agrivet – Management Hub</h3>
-            <p class="project-tech">HTML · CSS · JavaScript</p>
-            <a href="https://khenzo-agrivet.vercel.app" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-image">
-            <img src="myLogo.png" alt="Bambu Vibe Inventory System" />
-          </div>
-          <div class="project-content">
-            <h3>Bambu Vibe – Inventory System</h3>
-            <p class="project-tech">Java · Excel · Visual Studio</p>
-            <a href="https://github.com/pjmVillaraiz/Bambu-Vibe" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-image">
-            <img src="VITALINK.png" alt="VitaLink: Web-Based Health Records, Decision Support & CRM System" />
-          </div>
-          <div class="project-content">
-            <h3>VitaLink: Web-Based Health Records, Decision Support & CRM System</h3>
-            <p class="project-tech">Web Application</p>
-            <a href="https://studio--studio-1475651717-cc253.us-central1.hosted.app/login" target="_blank" class="project-link">
-              View Project <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-description">Let's work together</p>
-      </div>
-
-      <div class="contact-content">
-        <div class="contact-info fade-up">
-          <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:amPonce@mcm.edu.ph">amPonce@mcm.edu.ph</a></div>
-          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Davao City, Philippines</span></div>
-        </div>
-
-        <div class="social-links-large fade-up">
-          <a href="https://www.facebook.com/sargepnc/" target="_blank" class="social-link-large"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
-          <a href="https://www.instagram.com/dvr7000/" target="_blank" class="social-link-large"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-          <a href="https://github.com" target="_blank" class="social-link-large"><i class="fab fa-github"></i><span>GitHub</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>© 2026 Anthon Miguel Ponce · BSIS Student</p>
   </div>
-</footer>
 
-<button id="backToTop"><i class="fas fa-arrow-up"></i></button>
-
-<script src="script.js"></script>
+  <script src="projects.js"></script>
+  <script src="certificates.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

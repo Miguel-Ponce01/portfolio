@@ -1,0 +1,185 @@
+// ==========================
+// CERTIFICATES DATABASE
+// ==========================
+const certificatesData = [
+  {
+    id: "cert-it-specialist-java",
+    title: "Information Technology Specialist - Java",
+    issuer: "Certiport (Pearson)",
+    date: "November 2025",
+    description: "Passed the Information Technology Specialist Java examination, demonstrating proficiency in Java fundamentals, data types, control flow, debugging, and Object-Oriented Programming (OOP).",
+    image: "assets/certificates/Certiport_Java_Certificate.png",
+    verifyUrl: "https://verify.certiport.com",
+    category: "development"
+  },
+  {
+    id: "cert-aws-cloud-foundations",
+    title: "AWS Academy Graduate - Cloud Foundations",
+    issuer: "AWS Academy",
+    date: "June 2025",
+    description: "Successfully completed the AWS Academy Cloud Foundations course, covering cloud computing concepts, AWS core services, security, architecture, pricing, and support.",
+    image: "assets/certificates/AWS_Cloud_Foundations_Certificate.png",
+    verifyUrl: "https://www.credly.com/go/VvdMdlab",
+    category: "development"
+  },
+  {
+    id: "cert-n0hnfjmmr29h",
+    title: "Generative AI: Introduction and Applications Specialization",
+    issuer: "IBM",
+    date: "June 2026",
+    description: "Successfully completed the IBM Generative AI 3-course specialization covering AI fundamentals, prompt engineering, and project management integrations.",
+    image: "assets/certificates/Coursera_N0HNFJMMR29H.png",
+    verifyUrl: "https://coursera.org/verify/N0HNFJMMR29H",
+    category: "development"
+  },
+  {
+    id: "cert-nqcqskloggh3",
+    title: "Foundations of User Experience (UX) Design",
+    issuer: "Google",
+    date: "June 2025",
+    description: "Successfully completed the online course \"Foundations of User Experience (UX) Design\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_NQCQSKLOGGH3.png",
+    verifyUrl: "https://coursera.org/verify/NQCQSKLOGGH3",
+    category: "development"
+  },
+  {
+    id: "cert-du4z0ytfaw7f",
+    title: "Start the UX Design Process: Empathize, Define, and Ideate",
+    issuer: "Google",
+    date: "June 2025",
+    description: "Successfully completed the online course \"Start the UX Design Process: Empathize, Define, and Ideate\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_DU4Z0YTFAW7F.png",
+    verifyUrl: "https://coursera.org/verify/DU4Z0YTFAW7F",
+    category: "development"
+  },
+  {
+    id: "cert-ffvoq6v99cbw",
+    title: "Build Wireframes and Low-Fidelity Prototypes",
+    issuer: "Google",
+    date: "June 2025",
+    description: "Successfully completed the online course \"Build Wireframes and Low-Fidelity Prototypes\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_FFVOQ6V99CBW.png",
+    verifyUrl: "https://coursera.org/verify/FFVOQ6V99CBW",
+    category: "development"
+  },
+  {
+    id: "cert-ozit3a7cjsia",
+    title: "Create High-Fidelity Designs and Prototypes in Figma",
+    issuer: "Google",
+    date: "June 2025",
+    description: "Successfully completed the online course \"Create High-Fidelity Designs and Prototypes in Figma\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_OZIT3A7CJSIA.png",
+    verifyUrl: "https://coursera.org/verify/OZIT3A7CJSIA",
+    category: "development"
+  },
+  {
+    id: "cert-ddh4qm3gpz4l",
+    title: "Build Dynamic User Interfaces (UI) for Websites",
+    issuer: "Google",
+    date: "June 2025",
+    description: "Successfully completed the online course \"Build Dynamic User Interfaces (UI) for Websites\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_DDH4QM3GPZ4L.png",
+    verifyUrl: "https://coursera.org/verify/DDH4QM3GPZ4L",
+    category: "development"
+  },
+  {
+    id: "cert-da5i4u8raen3",
+    title: "Conduct UX Research and Test Early Concepts",
+    issuer: "Google",
+    date: "June 2026",
+    description: "Successfully completed the online course \"Conduct UX Research and Test Early Concepts\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_DA5I4U8RAEN3.png",
+    verifyUrl: "https://coursera.org/verify/DA5I4U8RAEN3",
+    category: "development"
+  },
+  {
+    id: "cert-m7sz6i57g3ct",
+    title: "Introduction to User Experience Design",
+    issuer: "Georgia Institute of Technology",
+    date: "June 2025",
+    description: "Successfully completed the online course \"Introduction to User Experience Design\" authorized by Georgia Institute of Technology and offered through Coursera.",
+    image: "assets/certificates/Coursera_M7SZ6I57G3CT.png",
+    verifyUrl: "https://coursera.org/verify/M7SZ6I57G3CT",
+    category: "development"
+  },
+  {
+    id: "cert-rakzymdlvl8r",
+    title: "Introduction to Programming With C#",
+    issuer: "Microsoft",
+    date: "November 2025",
+    description: "Successfully completed the online course \"Introduction to Programming With C#\" authorized by Microsoft and offered through Coursera.",
+    image: "assets/certificates/Coursera_RAKZYMDLVL8R.png",
+    verifyUrl: "https://coursera.org/verify/RAKZYMDLVL8R",
+    category: "development"
+  },
+  {
+    id: "cert-qqpeuotduwps",
+    title: "Introduction to Object-Oriented Programming with Java",
+    issuer: "LearnQuest",
+    date: "May 2025",
+    description: "Successfully completed the online course \"Introduction to Object-Oriented Programming with Java\" authorized by LearnQuest and offered through Coursera.",
+    image: "assets/certificates/Coursera_QQPEUOTDUWPS.png",
+    verifyUrl: "https://coursera.org/verify/QQPEUOTDUWPS",
+    category: "development"
+  },
+  {
+    id: "cert-oy60y2ifavxg",
+    title: "Discover the Art of Prompting",
+    issuer: "Google",
+    date: "June 2026",
+    description: "Successfully completed the online course \"Discover the Art of Prompting\" authorized by Google and offered through Coursera.",
+    image: "assets/certificates/Coursera_OY60Y2IFAVXG.png",
+    verifyUrl: "https://coursera.org/verify/OY60Y2IFAVXG",
+    category: "development"
+  },
+  {
+    id: "cert-g3l6rxkepkbc",
+    title: "Generative AI: Prompt Engineering Basics",
+    issuer: "IBM",
+    date: "June 2026",
+    description: "Successfully completed the online course \"Generative AI: Prompt Engineering Basics\" authorized by IBM and offered through Coursera.",
+    image: "assets/certificates/Coursera_G3L6RXKEPKBC.png",
+    verifyUrl: "https://coursera.org/verify/G3L6RXKEPKBC",
+    category: "development"
+  },
+  {
+    id: "cert-xenq1z848tik",
+    title: "Generative AI: Introduction and Applications",
+    issuer: "IBM",
+    date: "June 2026",
+    description: "Successfully completed the online course \"Generative AI: Introduction and Applications\" authorized by IBM and offered through Coursera.",
+    image: "assets/certificates/Coursera_XENQ1Z848TIK.png",
+    verifyUrl: "https://coursera.org/verify/XENQ1Z848TIK",
+    category: "development"
+  },
+  {
+    id: "cert-z30c4ygwtz22",
+    title: "Generative AI: Unleash Your Project Management Potential",
+    issuer: "SkillUp",
+    date: "June 2026",
+    description: "Successfully completed the online course \"Generative AI: Unleash Your Project Management Potential\" authorized by SkillUp and offered through Coursera.",
+    image: "assets/certificates/Coursera_Z30C4YGWTZ22.png",
+    verifyUrl: "https://coursera.org/verify/Z30C4YGWTZ22",
+    category: "development"
+  },
+  {
+    id: "cert-e0ujddydnes7",
+    title: "Ethical Issues in AI and Professional Ethics",
+    issuer: "University of Colorado Boulder",
+    date: "November 2025",
+    description: "Successfully completed the online course \"Ethical Issues in AI and Professional Ethics\" authorized by University of Colorado Boulder and offered through Coursera.",
+    image: "assets/certificates/Coursera_E0UJDDYDNES7.png",
+    verifyUrl: "https://coursera.org/verify/E0UJDDYDNES7",
+    category: "development"
+  },
+  {
+    id: "cert-je6x1wa39sf4",
+    title: "Computing, Ethics, and Society Foundations",
+    issuer: "University of Colorado Boulder",
+    date: "November 2025",
+    description: "Successfully completed the online course \"Computing, Ethics, and Society Foundations\" authorized by University of Colorado Boulder and offered through Coursera.",
+    image: "assets/certificates/Coursera_JE6X1WA39SF4.png",
+    verifyUrl: "https://coursera.org/verify/JE6X1WA39SF4",
+    category: "development"
+  }
+];
