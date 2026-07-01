@@ -3,6 +3,56 @@
 // ==========================
 const certificatesData = [
   {
+    id: "cert-eventflow-innovision-2026",
+    title: "EventFlow Professional Certification: CCIS InnoVision 2026",
+    issuer: "EventFlow",
+    date: "June 20, 2026",
+    description: "Conference participation verified through EventFlow geofence attendance tracking. Verification ID: EF-CERT-2026-1340128.",
+    image: "assets/certificates/EventFlow_InnoVision_2026.png",
+    verifyUrl: "",
+    category: "development"
+  },
+  {
+    id: "cert-ccis-best-enterprise-community-systems-project",
+    title: "Certificate of Excellence: Best Enterprise & Community Systems Project",
+    issuer: "College of Computer and Information Science (CCIS)",
+    date: "June 20, 2026",
+    description: "Awarded to KomuniTrade (Shelley, Anthon Miguel, & Lynnard) in recognition of outstanding innovation, technical excellence, and exceptional project presentation during CCIS Innovision 2026: Annual Academic Colloquium and Project Showcase.",
+    image: "assets/certificates/CCIS_Best_Enterprise_Community_Systems_Project.jpg",
+    verifyUrl: "",
+    category: "development"
+  },
+  {
+    id: "cert-ccis-best-mobile-web-application",
+    title: "Certificate of Excellence: Best Mobile/Web Application",
+    issuer: "College of Computer and Information Science (CCIS)",
+    date: "June 20, 2026",
+    description: "Awarded to KomuniTrade (Shelley, Anthon Miguel, & Lynnard) in recognition of outstanding innovation, technical excellence, and exceptional project presentation during CCIS Innovision 2026: Annual Academic Colloquium and Project Showcase.",
+    image: "assets/certificates/CCIS_Best_Mobile_Web_Application.jpg",
+    verifyUrl: "",
+    category: "development"
+  },
+  {
+    id: "cert-ccis-best-question-answer",
+    title: "Certificate of Excellence: Best in Question and Answer",
+    issuer: "College of Computer and Information Science (CCIS)",
+    date: "June 20, 2026",
+    description: "Awarded to KomuniTrade (Shelley, Anthon & Lynnard) in recognition of outstanding innovation, technical excellence, and exceptional project presentation during CCIS Innovision 2026: Annual Academic Colloquium and Project Showcase.",
+    image: "assets/certificates/CCIS_Best_In_Question_Answer.jpg",
+    verifyUrl: "",
+    category: "development"
+  },
+  {
+    id: "cert-ccis-participation",
+    title: "Certificate of Participation: CCIS InnoVision 2026",
+    issuer: "College of Computer and Information Science (CCIS)",
+    date: "June 20, 2026",
+    description: "Presented to Anthon Miguel Ponce for actively participating in the CCIS Innovision 2026: College Research, Innovation, and Project Colloquium held at the RG Birrey Building, MCM, Davao City.",
+    image: "assets/certificates/CCIS_Participation.jpg",
+    verifyUrl: "",
+    category: "development"
+  },
+  {
     id: "cert-it-specialist-java",
     title: "Information Technology Specialist - Java",
     issuer: "Certiport (Pearson)",
